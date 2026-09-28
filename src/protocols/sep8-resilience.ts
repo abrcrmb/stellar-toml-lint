@@ -15,7 +15,7 @@ export async function auditSep8Timeout(serverUrl: string) {
   
   if (failures > 2) {
     diagnostics.push('sep8/approval-server-unresponsive');
-  } else if (totalLatency / 5 > 2000) {
+  } else if (totalLatency / 5 > 3000) {
     diagnostics.push('sep8/approval-server-high-latency');
   }
   return diagnostics;
